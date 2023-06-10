@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Services</title>
+
+<style type="text/css">
+	* {margin: 0;padding: 0;box-sizing:border-box ;font-family: 'poppins', sans-serif;}
+body{color:white;background: black;background: url('images/maine-coon-694730.jpg') no-repeat;background-size: cover;background-position: center;}
+header{position: fixed;top: 0;left: 0;width: 100%;padding: 20px 10%;background: transparent;
+display: flex;justify-content: space-between; align-items: center;z-index: 100;
+}
+.logo{font-size:25px;color:#ededed;text-decoration:none;font-weight:600;position:relative; }
+.logo::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 1.0);animation: showRight 1s ease forwards;animation-delay: .5s;border-radius: 6px}
+ul{margin-right: -50px}
+ul li{list-style-type: none;display: inline-block;}
+ul a{font-size:16px;color:#ededed;text-decoration:none;font-weight:bold;margin-left: 35px;transition: .3s;text-transform:uppercase; }
+ul a:hover, ul a.active{color:rgb(205, 133, 63); }
+.home{display: flex;align-items: center;height: 100vh;padding: 0 10%;}
+.home-content{max-width:400px}
+.home-content h1 i{margin-right: 8px}
+.home-content h1{font-size: 56px;font-weight: 700;position: relative;}
+.home-content h1::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: transparent;animation: showRight 1s ease forwards;animation-delay: 1s;border-radius: 20px}
+.home-content h3{font-size: 38px;font-weight: 700;color:rgba(205, 133, 63,0.8);position: relative;}
+.home-content h3::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: transparent;animation: showRight 1s ease forwards;animation-delay: 1.5s;border-radius: 6px}
+.home-content p{font-size: 16px;margin: 20px 0 40px;position: relative;}
+.home-content p::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: transparent;animation: showRight 1s ease forwards;animation-delay: 2s;border-radius: 10px}
+.btn-box{width: 345px;height: 50px;display: flex;justify-content: space-between;position: relative;}
+.btn-box::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: transparent;animation: showRight 1s ease forwards;animation-delay: 2.5s;z-index: 2;border-radius: 6px;display: none;}
+.btn-box a{width: 150px;height: 100%;background: rgba(205, 133, 63,0.8);border: 2px solid rgba(205, 133, 63,0.8);border-radius: 8px;display: inline-flex;font-size: 19px;color: black;text-decoration: none;font-weight: 600;letter-spacing: 1px;justify-content: center;align-items: center;position: relative;z-index: 1;overflow: hidden;transition:.5s }
+.btn-box a:nth-child(2){background: transparent;color:rgb(205, 133, 63)}
+.btn-box a::before{content:'';position:absolute; top: 0;left: 0;width: 0;height: 100%;background: black;z-index: -1;transition: .5s }
+.btn-box a:hover::before{width: 100%;}
+.btn-box a:nth-child(2)::before{background: rgba(205, 133, 63,0.8)}
+.btn-box a:nth-child(2):hover{color: rgb(0, 0, 0)}
+.btn-box a:hover{color: rgba(205, 133, 63,0.8);}
+.home-sci img{width: 30px}
+.home-sci{position: absolute;bottom: 40px;width:170px;display:flex;justify-content:space-between;left: 500px}
+.home-sci::before{content: '';position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: transparent;animation: showRight 1s ease forwards;animation-delay: 3s;z-index: 2;border-radius: 15px;display: none;}
+
+.home-sci a{display:inline-flex;width: 40px;height: 40px;background: transparent; justify-content: center;align-items:center;position:relative;z-index: 1;overflow: hidden;transition:.5s;border: 2px solid rgba(205, 133, 63, 0.8);border-radius: 50%;font-size: 20px;color: rgba(205, 133, 63, 0.8);text-decoration: none;}
+.home-sci a::before{content:'';position: absolute;top: 0;left: 0;width: 0;height: 100%;background: rgba(205, 133, 63, 0.8);z-index: -1;transition:.5s;border-radius: 60px;}
+
+.home-sci a:hover::before{width: 100%}
+.home-sci a:hover{color:black; }
+.home-imgHover{position: absolute;top: 0;right: 30px;width: 500px;height: 100%;background: transparent;background-size: 300px 300px;transition:.3s;animation: manipActiveHover .1s forwards; animation-delay:4s;pointer-events:none; }
+
+.home-imgHover::after{content: '';position: absolute;top: 0;right: 0;width: 140%;height: 100%;background:rgba(0, 0, 0, 0.5);background-size: 300px 200px;animation: showRight 1s ease forwards;animation-delay: 4s;background-position: center;margin-right: -30px}
+.home-imgHover:hover{background: transparent;background-size: 300px 300px;opacity: .8}
+ul .fa{margin-right: 8px}
+.checkbtn{font-size: 30px;cursor: pointer;float: right;color: white;line-height:80px;display: none; }
+#check{display: none;}
+.submenu{display: none;}
+header nav ul li:hover .submenu{display: table;position: absolute;margin-top: 5px;margin-left: 10px;}
+
+header nav ul li:hover .submenu ul{display: table;margin: 10px;}
+header nav ul li:hover .submenu li{width: 150px;padding: 5px;border-radius: 5px;text-align: left; background: transparent;margin: 0 0 10px;display: table;font-size: 12px;text-align: center; color:antiquewhite; }
+
+header nav ul li:hover .submenu li a{background: transparent; color: antiquewhite;font-size: 12px}
+
+
+
+@keyframes showRight{100%{width: 0 }
+}
+
+@keyframes manipActiveHover{100%{pointer-events: auto; }}
+
+@media screen and (max-width: 900px){
+	.checkbtn{display: block;margin-right: 100%}
+	ul{position:absolute; top:100%;right:-100%;width:250px;height:70vh;background:rgba(0, 0, 0, 0.5);display:flex;align-items:center;flex-direction:column;padding:50px 20px;transition:all .55s ease ;margin-top: -50px;border-radius:10px }
+	
+	ul a{display: block;margin: 20px;margin-left: 0;font-size: 15px;}
+
+	#check:checked ~ ul{right:0}
+	.home-imgHover::after{display: none;}
+    header nav ul li:hover .submenu ul{background: transparent;margin-right: -200px;margin-top: -60px}
+    .logo{display: none;}
+    .home{margin-left: 2%}
+
+
+
+		
+}
+@media screen and (max-width: 700px){.home{margin-top: 300px;}
+	.home-sci{left:10px;top:120px;padding:0 10px;background: none}
+	.home-sci::before{display: none;}
+
+    
+}
+
+@media screen and (max-width: 1100px){.home-imgHover::after{display: none;}
+}
+	
+
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+</head>
+
+
+<body>
+	
+	<header>
+		<a href="#" class="logo">MaxSteel</a>
+
+
+		<nav>
+            <input type="checkbox" id="check">
+		<label for="check" class="checkbtn"><i class="fa fa-bars" aria-hidden="true"></i></label>
+
+			<ul>
+            
+			<li><a href="file:///C:/Users/Steel/Documents/My_Website/portfolio.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+			<li><a href="file:///C:/Users/Steel/Documents/My_Website/About%20Me.html"><i class="fa fa-user" aria-hidden="true"></i>About</a></li>
+			<li><a href="#" class="active"><i class="fa fa-laptop" aria-hidden="true"></i>services</a></li>
+			<li><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>Portfolio</a></li>
+			<li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+            <div class="submenu">
+            	<ul>
+            		<li>shevsteel@gmail.com</li>
+            		<li>+233548738152</li>
+            		
+
+            	</ul>
+            	
+            </div>
+
+
+			</li>
+
+			</ul>
+		</nav>
+		
+		
+		
+	
+	</header>
+
+	<section class="home">
+		
+		<div class="home-content">
+          <h1><i class="fa fa-laptop" aria-hidden="true"></i>Services</h1>
+          <h3>Web Development</h3>
+          <p>I am a web developer. I've mastered CSS and HTML. If you want to develop a website for your business, institution or for personal use I'm your guy. </p>
+
+          <h3>Video Editor</h3>
+           <p>I am video editor. I've created several videos on youtube and other platforms. If you want to edit your videos for youtube or any other platforms contact me. </p>
+          
+          <div class="btn-box">
+          	<a href="#">Hire Me</a>
+          	<a href="#">Let's Talk</a>
+
+          </div>
+
+		</div>
+		
+
+		<div class="home-sci">
+		<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+
+		</div>
+
+      <span class="home-imgHover"></span>
+      
+
+	</section>
+
+
+
+
+</body>
+</html>

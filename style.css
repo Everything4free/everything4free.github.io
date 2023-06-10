@@ -1,0 +1,115 @@
+body{background:rgba(0, 0, 0, 0.9);}
+	
+header{background: transparent; padding: 0 0 200px;background-image: url("images/room-2559790_1920.jpg");background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 5px;height: 200px;text-align: center;}
+header h1{font-family: serif;color: floralwhite; background:rgba(0, 0, 0, 0.6);border-radius:5px;font-size: 40px;padding: 10px;}
+header nav ul{text-align: center;}
+header nav ul li {display: inline-block;}
+header nav ul li:hover{color: white;}
+header nav ul li a{font-family: sans-serif; text-decoration:none;color:floralwhite;background:rgba(0, 0, 0, 0.5); padding:8px;border-radius:10px; box-shadow:grey 0 0 10px;margin:10px;font-size: 14px;transition: .3s; }
+header nav ul li a:hover{background: antiquewhite;color: black; font-weight: bold;}
+header nav ul li img{width: 30px;border-radius: 50%}
+.images{ display: flex;flex-direction: row;color: white;padding: 20px;flex-wrap: wrap;margin:50px 0 0 0;background: rgba(0, 0, 0, 0.2);border-radius: 10px}
+.images figure{margin:auto;width:200px;text-align: center;text-transform: uppercase; font-family: cursive;}
+.images figure a{text-decoration: none;color: floralwhite; font-weight: bold;}
+.images figure img{width:200px;border-radius: 50%;box-shadow: white 0 0 20px;border: 1px solid white;}
+.images figure img:hover{box-shadow: white 0 0 50px}
+.end{background: #333;color: antiquewhite;font-family: cursive;border-radius:5px; text-align: center;}
+.mobile{display: none;}
+footer ol li{display: inline-block; margin: 5px}
+
+.Tend{text-align: center;color: white;}
+.images2{display:flex;flex-direction:row;flex-wrap:wrap;text-align: left; }
+
+.images2 nav ul li a{background: #222; color: floralwhite; font-size: 15px; border-radius: 5px;box-shadow: white 0 0 10px;border: 1px solid black;text-decoration: none; font-family: monospace;padding: 10px;margin: 0;} 
+.images2 nav ul li a:hover {color: black;background: white;}
+.images2 nav ul li {display: inline-block;margin: 10px 10px 20px 30px; }
+
+.images2 nav ul li a:hover::before{width: 100%}
+.Description img{width: 500px;border-radius: 10px;box-shadow: grey 0 0 10px; }
+
+.Description iframe{width: 500px;border-radius: 10px;box-shadow: grey 0 0 10px; height:335px;margin: 50px 0 0 120px }
+.Description ul li{list-style-type: none;}
+
+.Description ul li a{text-decoration: none;transition:.2s }
+.Description ul li a:hover{color: palevioletred;}
+.Description h3{color: white;font-family: sans-serif;font-size: 17px;margin:50px 0 0 0}
+.Description h3 a{color: palevioletred;}
+.Description h1 a{color: antiquewhite;font-size: 30px;font-weight: bolder;}
+
+.container{width: 100%;min-height: 5vh;padding: 0 0 40px 0;display: flex;align-items: center; justify-content: center;margin: 80px 0 0 0; background: transparent;
+}
+.search-bar{width: 100%;max-width: 500px;background: white; display: flex;align-items: center; border-radius: 60px; padding: 5px 15px; backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{background: white;flex: 1;border: 0;outline: none;padding: 18px 16px; font-size:20px;color:black; border-radius: 60px;
+
+}
+::placeholder{
+	color: rgba(0, 0, 0, 0.5);background: white;
+}
+.search-bar button{border:0;border-radius: 50%;width: 60px;height: 50px; background: white;
+
+}
+.search-bar img{width: 50px;padding: 0 10px}
+
+.active{background: antiquewhite;color: black;font-weight: bold;}
+
+
+.submenu1{display: none;}
+header nav ul li:hover .submenu1{display: table;position: absolute;margin-top: 5px;margin-left: -40px;}
+
+header nav ul li:hover .submenu1 ul{display: table;margin: 10px;}
+header nav ul li:hover .submenu1 li{width: 150px;padding: 5px;border-radius: 5px;text-align: left; background: rgba(0, 0, 0, 0.6);margin: 0 0 10px;display: table;font-size: 15px;text-align: center; }
+
+header nav ul li:hover .submenu1 li a{background: transparent; color: antiquewhite;font-size: 12px}
+.HelpM{color: floralwhite; padding: 0;text-align: right;font-size: 17px}
+.HelpM img{width: 35px;border-radius: 50%; margin-left: 30px}
+.HelpM img:hover{box-shadow:black 0 0 10px; }
+
+.Menu{text-align: right;}
+
+.Menu img{width: 35px;border-radius: 50%; margin:0 40px ;
+}
+.Menu img:hover{box-shadow:black 0 0 10px; 
+}
+
+.AllMenu img{margin-top: -80px}
+.images3 img{height: 40vh}
+.images4 img{height: 40vh}
+.images5 img{height: 40vh}
+.images6 img{height: 40vh}
+.images7 img{height: 40vh}
+.Author h1{color: antiquewhite;font-size: 30px}
+
+.Author img{width: 500px;border-radius: 10px;box-shadow: white 0 0 10px;}
+.Author h3{color: white;font-family: sans-serif;}
+.Author h3 a{text-decoration: none;color: darkviolet;}
+.Help h1{color: antiquewhite;font-size: 30px}
+.Help img{width: 500px;border-radius: 10px;box-shadow: white 0 0 10px;}
+.Help h3{color: white;font-family: sans-serif;}
+.Help h3 a{text-decoration: none;color: darkviolet;}
+
+.Help h2{color: palevioletred;}
+
+
+
+
+@media screen and (max-width: 650px){header nav ul li {display: table; margin: 15px;}  header h1{padding: 30px}.container{margin:0 }header nav ul li a{font-size: 12px}.search-bar{max-width: 400px;padding:5px 15px }header nav ul li:hover .submenu1 li{display: inline-block;font-size: 13px; margin:0 0 0 15px }.images2 nav ul li {display: inline-block;margin:100px 0 0 0 }.images2{display: none;}.images3 img{height: 20vh}
+.images4 img{height: 20vh;}
+.images5 img{height: 20vh}
+.images6 img{height: 20vh}
+.images7 img{height: 20vh}
+.images figure img{width: 150px}
+.images{display: none; margin-top: 200px;flex-wrap:wrap; }
+.Description img{width: 350px;margin-left: -20px}
+.Description iframe{width: 300px;height: 35vh;}
+.Author h1{margin-top: 150px}
+.Author img{margin-bottom: 50px;margin-top: 50px;width: 400px}
+.Help h1{margin-top: 150px}
+.Help img{margin-bottom: 50px;margin-top: 50px;width: 400px}
+.Description h1{margin-top: 150px}
+
+
+
+} 
+@media screen and (max-width: 1100px){.Description iframe{margin: 50px 50px 0 0}
+}
